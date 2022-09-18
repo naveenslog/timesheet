@@ -13,4 +13,4 @@ django_compressor==4.1
 gunicorn==20.0.4
 whitenoise
 django_heroku
-django_filters
+django-filter
