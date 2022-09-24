@@ -2,7 +2,9 @@ from django.db import models
 from django.conf import settings
 
 class Abstract(models.Model):
-
+    """
+    Abstract Model
+    """
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

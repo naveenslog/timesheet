@@ -7,7 +7,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 
 class AttendanceViewSet(viewsets.ModelViewSet):
-
+    """
+    Attendance Viewset
+    """
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
     permission_classes = (IsAuthenticated,)
@@ -22,7 +24,9 @@ class AttendanceViewSet(viewsets.ModelViewSet):
         return TimesheetFilter(self.request.query_params, queryset).qs
 
 class InOutViewSet(viewsets.ModelViewSet):
-
+    """
+    Inout Viewset
+    """
     queryset = Attendance.objects.all()
     serializer_class = AttendanceSerializer
     permission_classes = (IsAuthenticated,)

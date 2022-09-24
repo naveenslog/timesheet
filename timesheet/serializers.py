@@ -6,7 +6,9 @@ from datetime import datetime
 
 
 class AttendanceSerializer(serializers.ModelSerializer):
-
+    """
+    Attendance serializer
+    """
     employee = CustomUserSerializer(read_only=True, required=False)
 
     class Meta:

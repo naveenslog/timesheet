@@ -7,7 +7,10 @@ from django_filters import FilterSet
 from timesheet.models import Attendance
 
 class TimesheetFilter(FilterSet):
-    print("Called")
+    """
+    Timesheet Filter
+    """
+
     start = CharFilter(method="filter_start")
     end = CharFilter(method="filter_end")
     year = DateFilter(field_name="date", lookup_expr="year")

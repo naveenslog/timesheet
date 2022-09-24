@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class UserManager(BaseUserManager):
-
+    """
+    Usermanager to manage users
+    """
     use_in_migrations = True
 
     def create_user(self, email, password=None):
@@ -24,7 +26,9 @@ class UserManager(BaseUserManager):
         return user
 
 class User(AbstractBaseUser):
-
+    """
+    User Model
+    """
     fullname = models.CharField(
         null=True,
         blank=True,
